@@ -23,3 +23,24 @@ $monday = $week[0];
 echo $monday;
 
 //An array begins at 0.
+
+new_exercise(3);
+// === Exercise 3 ===
+// This should echo ` "Debugged !" `, fix it so that that is the literal text echo'ed
+
+$str = 'Debugged ! Also very fun';
+echo substr($str, 0, 10);
+
+// ' instead of "
+
+new_exercise(4);
+// === Exercise 4 ===
+// Sometimes debugging code is just like looking up code and syntax...
+// The print_r($week) should give:  Array ( [0] => mon [1] => tues [2] => wednes [3] => thurs [4] => fri [5] => satur [6] => sun )
+// Look up whats going wrong with this code, and then fix it, with ONE CHARACTER!
+
+foreach($week as &$day) {
+    $day = substr($day, 0, strlen($day)-3);
+}
+
+print_r($week);
